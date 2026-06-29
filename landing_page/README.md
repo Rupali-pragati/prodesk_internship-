@@ -26,12 +26,6 @@ This landing page was built for the digital marketing wing of Prodesk IT. The ob
 * JavaScript (ES6)
 * Font Awesome Icons
 
-
-## Screenshots
-
-
-
-
 ## Learning Outcomes
 
 Through this project, I gained hands-on experience in:
@@ -43,6 +37,9 @@ Through this project, I gained hands-on experience in:
 * Mobile Navigation Design
 * GitHub Version Control
 * Frontend Deployment Workflows
+
+##Site link
+https://prodesk-internship.vercel.app/#services
 
 ## Author
 
