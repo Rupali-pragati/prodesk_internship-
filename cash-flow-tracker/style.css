@@ -1,0 +1,41 @@
+/* --- Core CSS Architecture Refinements --- */
+
+/* Smooth scroll handling across the viewport */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar configuration for the Expense Ledger Logs */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #0f172a; /* matches Slate 900 */
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #334155; /* matches Slate 700 */
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4; /* matches Cyan 500 on hover */
+}
+
+/* Base style overrides to prevent input field spinner layout breaking */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Smooth transitions for state transformations */
+.transition-all {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
