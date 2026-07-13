@@ -83,15 +83,14 @@ ${
     console.log("All GEMINI vars:", Object.keys(process.env).filter(k => k.includes("GEMINI")));
     console.log("===============================");
 
-    if (!apiKey || apiKey === "AQ.Ab8RN6K73Ks7iVSa4rMsZ8DW0QvSrLJd-RXn25fw3hspJwNCiQE") {
-      return NextResponse.json(
-        {
-          error:
-            "API key not configured. Set a valid GEMINI_API_KEY in your .env file.",
-        },
-        { status: 500 },
-      );
-    }
+   if (!apiKey) {
+  return NextResponse.json(
+    {
+      error: "API key not configured. Set GEMINI_API_KEY in your .env.local file.",
+    },
+    { status: 500 }
+  );
+}
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
