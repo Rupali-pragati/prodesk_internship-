@@ -11,12 +11,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(#2563EB);
+  background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
   padding: 13px 20px;
   margin-bottom: 24px;
-  box-shadow: 0 8px 24px rgba(15,23,42,.08);
+  box-shadow: var(--shadow-soft);
   max-width: 480px;
   transition: box-shadow var(--transition-smooth), border-color var(--transition-smooth);
 }
@@ -50,7 +50,7 @@
 }
 
 .search-bar__clear {
-  background: #2563EB;
+  background: #F1F5F9;
   border-radius: 50%;
   width: 22px;
   height: 22px;

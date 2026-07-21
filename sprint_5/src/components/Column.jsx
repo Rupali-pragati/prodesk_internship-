@@ -48,7 +48,7 @@ function Column({
       >
         {tasks.length === 0 ? (
           <div className="column__empty">
-            <span className="column__empty-icon" aria-hidden="true">Clipboard icon</span>
+            <span className="column__empty-icon" aria-hidden="true">📋</span>
             <p className="column__empty-title">No tasks yet</p>
             <p className="column__empty-subtitle">Create your first task below.</p>
           </div>

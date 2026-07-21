@@ -1,5 +1,5 @@
 import '../styles/Header.css';
-import { LayoutDashboard } from "lucide-react";
+
 /**
  * Header component - premium dashboard header with a dark navy gradient.
  * Left side: logo + title + subtitle.

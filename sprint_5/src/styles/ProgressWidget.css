@@ -1,5 +1,5 @@
 .progress-widget {
-  background: rgba(166, 211, 230, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--color-border);
@@ -39,6 +39,6 @@
 .progress-widget__fill {
   height: 100%;
   border-radius: var(--radius-pill);
-  background: linear-gradient(90deg, #2563EB 0%, #2563EB 100%);
+  background: linear-gradient(90deg, #D4AF37 0%, #F4D775 100%);
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }

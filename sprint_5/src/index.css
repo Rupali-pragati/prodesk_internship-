@@ -5,7 +5,7 @@
    as CSS custom properties so every component stays consistent.
 =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* Palette */
@@ -53,7 +53,7 @@ html, body {
 }
 
 body {
-  font-family:'Inter',sans-serif;
+  font-family: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
