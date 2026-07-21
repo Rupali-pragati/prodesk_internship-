@@ -1,0 +1,6 @@
+{"timestamp":"00:00:01.586","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:11.271","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:00:12.943","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:16.232","source":"Server","level":"ERROR","message":"[formulas] GET failed MongoBulkWriteError: E11000 duplicate key error collection: test.colorants index: code_1 dup key: { code: \"W-001\" }"}
+{"timestamp":"00:00:54.450","source":"Browser","level":"LOG","message":"[Analytics] User interacted with Paint Mixing Calculator — Mix calculated {\"base\":\"White Base\",\"colorantRows\":2,\"loadPct\":40,\"unit\":\"L\",\"volume\":10}"}
+{"timestamp":"00:01:40.790","source":"Browser","level":"LOG","message":"[Analytics] User interacted with Paint Mixing Calculator — Mix calculated {\"base\":\"White Base\",\"colorantRows\":2,\"loadPct\":0.3,\"unit\":\"L\",\"volume\":10}"}
