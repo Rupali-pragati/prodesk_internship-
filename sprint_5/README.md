@@ -1,129 +1,88 @@
-# 📋 Kanban Task Board
+# Kanban Task Board
 
-> **v2 — Premium Redesign:** the UI was redesigned into an enterprise-grade
-> SaaS dashboard (Notion/Linear/ClickUp-inspired) with a navy/gold theme,
-> glassmorphism, dashboard stat widgets, and an overall-progress bar.
-> **No business logic, state, or features were changed** — see
-> `REDESIGN_NOTES.md` for the exact list of file-by-file changes.
+A production-quality Kanban Task Board built using React 18 and Vite. The application allows users to organize tasks across three stages: To Do, In Progress, and Done. Tasks are automatically saved using Local Storage, ensuring data persists even after refreshing the page.
 
+## Overview
 
-A production-quality, Trello-style Kanban board built with **React 18 + Vite**.
-Tasks are organized into three columns — **To Do**, **In Progress**, and **Done** —
-and everything persists automatically in the browser via `localStorage`.
+Version 2 introduces a redesigned user interface inspired by modern SaaS applications such as Notion, Linear, and ClickUp. The application features a clean dashboard, improved typography, professional icons, progress tracking, and an enhanced user experience while preserving all existing functionality.
 
-## ✨ Features
+## Features
 
 ### Phase 1
-- Add / delete tasks
-- Move tasks between columns with ◀ / ▶ buttons
-- Responsive, modern UI with card shadows and hover effects
-- Clean 3-column board layout
+- Add new tasks
+- Delete tasks
+- Move tasks between To Do, In Progress, and Done
+- Responsive three-column layout
+- Modern and user-friendly interface
 
 ### Phase 2
-- **Inline editing** — click ✎ to edit a task in place, with Save/Cancel
-- **Priority system** — High (red), Medium (yellow), Low (green) border + badge
-- **LocalStorage persistence** — board state survives page refresh automatically
-- **Real-time search** — filter tasks across all columns as you type
+- Edit tasks inline
+- Task priority levels (High, Medium, Low)
+- Automatic Local Storage persistence
+- Real-time task search across all columns
 
-### Phase 3 (Bonus)
-- **Drag-and-drop** using `@dnd-kit/core` — drag any card between any of the
-  three columns, with a live drop-target highlight and a floating drag preview
+### Phase 3
+- Drag and drop tasks between columns using @dnd-kit/core
+- Live drag preview and drop indicators
+- Dynamic dashboard statistics
+- Overall progress tracking
 
-## 🧱 Tech Stack
+## Technologies Used
 
-- React 18 (functional components + hooks only)
+- React 18
 - Vite
-- Plain CSS (no UI framework)
-- `@dnd-kit/core` for drag-and-drop
-- No Redux / Context API / backend — state lives in `App.jsx` and is lifted
-  down via props, persisted with a custom `useLocalStorage` hook
+- JavaScript (ES6+)
+- Plain CSS
+- @dnd-kit/core
+- Local Storage API
 
-## 📂 Project Structure
+## Getting Started
 
-```
-kanban-board/
-├── src/
-│   ├── components/     # Presentational, reusable UI components
-│   ├── hooks/           # useLocalStorage custom hook
-│   ├── utils/            # constants.js and taskHelpers.js (business logic)
-│   ├── styles/           # Component-scoped CSS files
-│   ├── App.jsx           # Holds all state; top-level orchestration
-│   └── main.jsx          # React entry point
-```
-
-## 🚀 Getting Started
+### Install Dependencies
 
 ```bash
-# 1. Install dependencies
 npm install
-
-# 2. Run the dev server
-npm run dev
-
-# 3. Open the app
-# Visit http://localhost:5173
 ```
 
-## 📦 Build for Production
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+## Production Build
 
 ```bash
 npm run build
-npm run preview   # preview the production build locally
+npm run preview
 ```
 
-## ☁️ Deploying to Vercel
+## Deployment
 
-1. Push this project to a GitHub repository.
-2. Go to [vercel.com](https://vercel.com) and click **New Project**.
-3. Import your GitHub repo.
-4. Vercel auto-detects Vite — confirm these settings:
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Click **Deploy**. Your Kanban board will be live at a `*.vercel.app` URL.
+The application is deployed on Vercel.
 
-Alternatively, via CLI:
+**Live Demo**
 
-```bash
-npm install -g vercel
-vercel login
-vercel --prod
-```
+https://prodesk-it-9gny.vercel.app/
 
-## 🗂 Data Model
+## Data Persistence
 
-Each task is stored as:
+All tasks are stored in the browser using Local Storage. Users can refresh or reopen the application without losing their data.
 
-```js
-{
-  id: "uuid-string",
-  text: "Task Name",
-  priority: "High" | "Medium" | "Low"
-}
-```
+## Architecture
 
-The board itself is stored as:
+- State management is handled using React Hooks.
+- Application state is maintained in the top-level component.
+- Business logic is separated into reusable utility functions.
+- Local Storage is managed through a reusable custom hook.
+- The UI is built using reusable React components for better maintainability.
 
-```js
-{
-  todo: [ ...tasks ],
-  inprogress: [ ...tasks ],
-  done: [ ...tasks ]
-}
-```
+## License
 
-## 🧠 Architecture Notes
-
-- All board state lives in `App.jsx` (single source of truth).
-- Data flows down via **props only** — no Context API, no Redux.
-- Business logic (ID generation, filtering, column navigation) is separated
-  into `utils/taskHelpers.js` and `utils/constants.js`.
-- Persistence is handled by the generic `useLocalStorage` hook, decoupled
-  from any Kanban-specific logic.
-
-## 📄 License
-
-MIT — free to use and modify.
-
-## Link
-Vercel- "https://prodesk-it-9gny.vercel.app/"
+This project is available for educational and personal use.
